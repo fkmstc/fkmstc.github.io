@@ -13,17 +13,17 @@
     <input type="text" id="links">
     <button onclick="button_click()">クリック</button>
 
-
 </body>
 
 <script>
     function button_click() {
-
         let elm = document.getElementById("links");
 
-        function button_click() {
-            window.location.href = elm.value
-        }
+        var links = document.createElement("a");
+        links.href = elm.value;
+        links.innerHTML=elm.value;
+        document.body.appendChild(links);
+        console.log(links)
     }
 </script>
 
